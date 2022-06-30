@@ -18,4 +18,8 @@ jobs:
         run: |
           echo "path of the workspace is ${{ github.workspace }}."
           ls ${{ github.workspace }}
+      - name: CPU and memory info
+        run: |
+          nproc
+          free -m
       - run: echo "🍏 This job's status is ${{ job.status }}."
